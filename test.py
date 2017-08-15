@@ -1,7 +1,11 @@
+from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 
 def main():
-    plt.plot([1,2,3,4,5])
+    dates = []
+    for i in range(5):
+        dates.append(datetime.now() - timedelta(days=i))
+    plt.plot(dates, [1,2,3,4,5])
     plt.ylabel('numbers')
     plt.show()
 
